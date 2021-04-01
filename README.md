@@ -69,15 +69,18 @@ $ mix test --cover
 
 ## Elixir Commands <a name = "elixir_commands"></a>
 
-Create a meal:
+Github client:
 
 ```elixir
-
+> Github.Client.get_users_repos("teamon")
+> Github.Client.get_users_repos("danilo-vieira")
+> Github.Client.get_users_repos("librity")
 ```
 
 ## Libs <a name = "libs"></a>
 
 - https://github.com/phoenixframework/phoenix
+- https://github.com/teamon/tesla
 
 ## Docs <a name = "docs"></a>
 
@@ -86,3 +89,5 @@ Create a meal:
 ## Resources <a name = "resources"></a>
 
 - https://www.tutorialspoint.com/elixir/elixir_lists_and_tuples.htm
+- https://stackoverflow.com/questions/29566248/how-to-use-io-inspect-on-a-long-list-without-trimming-it
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent
