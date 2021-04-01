@@ -1,19 +1,88 @@
-# Repo
+# Rocket Seat Ignite - Repo
 
-To start your Phoenix server:
+## Table of Contents
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+- [About](#about)
+- [Endpoints](#endpoints)
+- [Setup](#setup)
+- [Bash Commands](#bash_commands)
+- [Elixir Commands](#elixir_commands)
+- [Libs](#libs)
+- [Docs](#docs)
+- [Resources](#resources)
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## About <a name = "about"></a>
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+A repo fetcher backend made with Phoenix and Tesla.
 
-## Learn more
+## Endpoints <a name = "endpoints"></a>
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Built-in:
+
+- `GET` http://localhost:4000/dashboard
+
+`Repos`
+
+- `GET` http://localhost:4000/api/repos/:username
+
+## Setup <a name = "setup"></a>
+
+Install `Erlang`, `Elixir` and `Phoenix`.
+
+## Bash Commands <a name = "bash_commands"></a>
+
+```bash
+# Create phoenix app without webpacker or html views
+$ mix phx.new app_name --no-webpack --no-html
+
+# Intall dependencies
+$ mix deps.get
+
+# Compile project
+$ mix compile
+
+# Generate linter config file
+$ mix credo.gen.config
+
+# Run linter
+$ mix credo --strict
+
+# Start Phoenix dev server on http://localhost:4000
+$ mix phx.server
+
+# Start your project as an Interactive Elixir session
+$ iex -S mix
+
+# List all configured routes
+$ mix phx.routes
+```
+
+Tests
+
+```bash
+# Run tests
+$ mix test
+
+# Run tests w/ coverage report
+$ mix test --cover
+```
+
+## Elixir Commands <a name = "elixir_commands"></a>
+
+Create a meal:
+
+```elixir
+
+```
+
+## Libs <a name = "libs"></a>
+
+- https://github.com/phoenixframework/phoenix
+
+## Docs <a name = "docs"></a>
+
+- https://elixir-lang.org/crash-course.html
+
+## Resources <a name = "resources"></a>
+
+- https://www.tutorialspoint.com/elixir/elixir_lists_and_tuples.htm
