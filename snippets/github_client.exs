@@ -1,10 +1,10 @@
-Github.Client.get_users_repos("teamon")
-Github.Client.get_users_repos("danilo-vieira")
-Github.Client.get_users_repos("librity")
-Github.Client.get_users_repos(" ")
-Github.Client.get_users_repos("")
+Github.Client.get_user_repos("teamon")
+Github.Client.get_user_repos("danilo-vieira")
+Github.Client.get_user_repos("librity")
+Github.Client.get_user_repos(" ")
+Github.Client.get_user_repos("")
 
-[head | tails] = Github.Client.get_users_repos("librity")
+[head | tails] = Github.Client.get_user_repos("librity")
 head |> IO.inspect(limit: :infinity)
 
 # %{

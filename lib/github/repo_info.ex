@@ -1,7 +1,9 @@
-defmodule Github.ReposInfo do
+defmodule Github.RepoInfo do
   @keys [:id, :name, :description, :html_url, :stargazers_count]
 
   @enforce_keys @keys
+
+  @derive {Jason.Encoder, only: @keys}
 
   defstruct @keys
 
@@ -15,7 +17,7 @@ defmodule Github.ReposInfo do
     }
   end
 
-  def build_many([_head | _tail] = list) do
-    Enum.map(list, fn raw_repo -> build(raw_repo) end)
+  def build_many([_head | _tail] = raw_repos) do
+    Enum.map(raw_repos, fn raw_repo -> build(raw_repo) end)
   end
 end

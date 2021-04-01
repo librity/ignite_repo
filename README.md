@@ -72,9 +72,9 @@ $ mix test --cover
 Github client:
 
 ```elixir
-> Github.Client.get_users_repos("teamon")
-> Github.Client.get_users_repos("danilo-vieira")
-> Github.Client.get_users_repos("librity")
+> Github.Client.get_user_repos("teamon")
+> Github.Client.get_user_repos("danilo-vieira")
+> Github.Client.get_user_repos("librity")
 ```
 
 ## Libs <a name = "libs"></a>

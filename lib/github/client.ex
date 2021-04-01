@@ -3,7 +3,7 @@ defmodule Github.Client do
 
   alias Tesla.Env, as: Response
   alias Repo.Error
-  alias Github.ReposInfo
+  alias Github.RepoInfo
 
   @base_url "https://api.github.com"
   @request_headers [
@@ -14,7 +14,7 @@ defmodule Github.Client do
   plug Tesla.Middleware.Headers, @request_headers
   plug Tesla.Middleware.JSON
 
-  def get_users_repos(url \\ @base_url, username) do
+  def get_user_repos(url \\ @base_url, username) do
     "#{url}/users/#{username}/repos"
     |> get()
     |> handle_get()
@@ -25,6 +25,6 @@ defmodule Github.Client do
   defp handle_get({:ok, %Response{status: 404, body: _body}}),
     do: {:error, Error.build(:bad_request, "Github user not found")}
 
-  defp handle_get({:ok, %Response{status: 200, body: body}}),
-    do: {:ok, ReposInfo.build_many(body)}
+  defp handle_get({:ok, %Response{status: 200, body: raw_repos}}),
+    do: {:ok, RepoInfo.build_many(raw_repos)}
 end
